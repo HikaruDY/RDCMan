@@ -1,0 +1,7 @@
+*		text=auto
+
+*.sln		binary
+*.suo		binary
+*.vcxproj	binary
+*.csproj	binary
+

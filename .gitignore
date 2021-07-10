@@ -1,0 +1,14 @@
+/bin
+/obj
+
+/Git.cmd
+
+*.obj
+*.exp
+*.pdb
+*.cache
+
+*.suo
+*.vcxproj.user
+*.vcxproj.filters
+

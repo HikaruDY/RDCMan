@@ -1,0 +1,570 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E25EE249-C180-4A09-983F-CF7372D66770}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDCMan</RootNamespace>
+    <AssemblyName>RDCMan</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>RDCMan.ico</ApplicationIcon>
+    <StartupObject>RdcMan.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AxMSTSCLib">
+      <HintPath>RDCMan\Resources\AxMSTSCLib.dll</HintPath>
+    </Reference>
+    <Reference Include="MSTSCLib">
+      <HintPath>RDCMan\Resources\MSTSCLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RdcMan\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\AddCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\AddCredentialsDialog.Designer.cs">
+      <DependentUpon>AddCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\AddNodeDialogHelper.cs" />
+    <Compile Include="RdcMan\ArgumentParser.cs" />
+    <Compile Include="RdcMan\BaseSetting.cs" />
+    <Compile Include="RdcMan\BoolSetting.cs" />
+    <Compile Include="RdcMan\BuiltInVirtualGroup.cs" />
+    <Compile Include="RdcMan\BuiltInVirtualGroupCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ChangeType.cs" />
+    <Compile Include="RdcMan\CheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ClientPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ClientSizeCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\CommonDisplaySettings.cs" />
+    <Compile Include="RdcMan\CommonNodeSettings.cs" />
+    <Compile Include="RdcMan\Configuration\Current.cs" />
+    <Compile Include="RdcMan\Configuration\DisplaySizeElement.cs" />
+    <Compile Include="RdcMan\Configuration\DisplaySizeElementCollection.cs" />
+    <Compile Include="RdcMan\Configuration\LoggingElement.cs" />
+    <Compile Include="RdcMan\Configuration\ProgramUpdateElement.cs" />
+    <Compile Include="RdcMan\Configuration\RdcManSection.cs" />
+    <Compile Include="RdcMan\Configuration\WarningThresholdsElement.cs" />
+    <Compile Include="RdcMan\ConnectAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectAsDialog.Designer.cs">
+      <DependentUpon>ConnectAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectedGroup.cs" />
+    <Compile Include="RdcMan\ConnectedServerRef.cs" />
+    <Compile Include="RdcMan\ConnectionSettings.cs" />
+    <Compile Include="RdcMan\ConnectionSettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectionStateChangedEventArgs.cs" />
+    <Compile Include="RdcMan\ConnectionType.cs" />
+    <Compile Include="RdcMan\ConnectServersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectServersDialog.Designer.cs">
+      <DependentUpon>ConnectServersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToDialog.Designer.cs">
+      <DependentUpon>ConnectToDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToGroup.cs" />
+    <Compile Include="RdcMan\ControlExtensions.cs" />
+    <Compile Include="RdcMan\ControlVisibility.cs" />
+    <Compile Include="RdcMan\CredentialsProfile.cs" />
+    <Compile Include="RdcMan\CredentialsStore.cs" />
+    <Compile Include="RdcMan\CredentialsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\CredentialsUI.cs" />
+    <Compile Include="RdcMan\CustomClientSizeCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\CustomSizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\CustomSizeDialog.Designer.cs">
+      <DependentUpon>CustomSizeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\DefaultGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\DefaultGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>DefaultGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\DefaultSettingsGroup.cs" />
+    <Compile Include="RdcMan\DeferDecryptionItem.cs" />
+    <Compile Include="RdcMan\DelegateCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\DelegateMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\DisplaySettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\EnableTabsEventArgs.cs" />
+    <Compile Include="RdcMan\Encryption.cs" />
+    <Compile Include="RdcMan\EncryptionMethod.cs" />
+    <Compile Include="RdcMan\EncryptionSettings.cs" />
+    <Compile Include="RdcMan\EncryptionSettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\EnumMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\EnumSetting.cs" />
+    <Compile Include="RdcMan\FavoriteServerRef.cs" />
+    <Compile Include="RdcMan\FavoritesGroup.cs" />
+    <Compile Include="RdcMan\FileGroup.cs" />
+    <Compile Include="RdcMan\FileGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FileGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>FileGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\FileGroupPropertiesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FileGroupSettings.cs" />
+    <Compile Include="RdcMan\FileRequiredMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FindServersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FindServersDialog.Designer.cs">
+      <DependentUpon>FindServersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\FormTools.cs" />
+    <Compile Include="RdcMan\GatewaySettings.cs" />
+    <Compile Include="RdcMan\GatewaySettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GlobalOptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GlobalOptionsDialog.Designer.cs">
+      <DependentUpon>GlobalOptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GlobalSettings.cs" />
+    <Compile Include="RdcMan\Group.cs" />
+    <Compile Include="RdcMan\GroupBase.cs" />
+    <Compile Include="RdcMan\GroupBasePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupBasePropertiesDialog.Designer.cs">
+      <DependentUpon>GroupBasePropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GroupBasePropertiesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupChangedEventArgs.cs" />
+    <Compile Include="RdcMan\GroupDisplaySettings.cs" />
+    <Compile Include="RdcMan\GroupDisplaySettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupPropertiesDialog.Designer.cs">
+      <DependentUpon>GroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GroupPropertiesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupSettings.cs" />
+    <Compile Include="RdcMan\HeaderColumnClickEventArgs.cs" />
+    <Compile Include="RdcMan\HeaderColumnClickEventHandler.cs" />
+    <Compile Include="RdcMan\Helpers.cs" />
+    <Compile Include="RdcMan\HotKeyBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\IBuiltInVirtualGroup.cs" />
+    <Compile Include="RdcMan\ICredentialsTabPage.cs" />
+    <Compile Include="RdcMan\IDeferDecryption.cs" />
+    <Compile Include="RdcMan\ILogonCredentials.cs" />
+    <Compile Include="RdcMan\ImageConstants.cs" />
+    <Compile Include="RdcMan\IMainForm.cs" />
+    <Compile Include="RdcMan\ImportServersPropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\InheritanceControl.cs" />
+    <Compile Include="RdcMan\InheritanceMode.cs" />
+    <Compile Include="RdcMan\InheritSettingsType.cs" />
+    <Compile Include="RdcMan\INodePropertiesPage.cs" />
+    <Compile Include="RdcMan\IntSetting.cs" />
+    <Compile Include="RdcMan\IPlugin.cs" />
+    <Compile Include="RdcMan\IPluginContext.cs" />
+    <Compile Include="RdcMan\IRdpClient.cs" />
+    <Compile Include="RdcMan\IServerRefFactory.cs" />
+    <Compile Include="RdcMan\IServerTree.cs" />
+    <Compile Include="RdcMan\ISetting.cs" />
+    <Compile Include="RdcMan\ISettingControl.cs" />
+    <Compile Include="RdcMan\ISettingsTabPage.cs" />
+    <Compile Include="RdcMan\IUndockedServerForm.cs" />
+    <Compile Include="RdcMan\ListSessionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ListSessionsForm.Designer.cs">
+      <DependentUpon>ListSessionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ListSetting.cs" />
+    <Compile Include="RdcMan\LocalResourcesSettings.cs" />
+    <Compile Include="RdcMan\LocalResourcesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\Log.cs" />
+    <Compile Include="RdcMan\LogonCredentials.cs" />
+    <Compile Include="RdcMan\LogonCredentialsDialogOptions.cs" />
+    <Compile Include="RdcMan\LogonCredentialsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\LogonSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\LogonSettingsDialog.Designer.cs">
+      <DependentUpon>LogonSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\LongRunningActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\LongRunningActionForm.Designer.cs">
+      <DependentUpon>LongRunningActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\MenuExtensions.cs" />
+    <Compile Include="RdcMan\MenuHelper.cs" />
+    <Compile Include="RdcMan\MenuNames.cs" />
+    <Compile Include="RdcMan\NodeHelper.cs" />
+    <Compile Include="RdcMan\NodePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\NodePropertiesDialog.Designer.cs">
+      <DependentUpon>NodePropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\NodePropertiesPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\NodeVisitorResult.cs" />
+    <Compile Include="RdcMan\NumericTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\OperationBehavior.cs" />
+    <Compile Include="RdcMan\PasswordSetting.cs" />
+    <Compile Include="RdcMan\PluginContext.cs" />
+    <Compile Include="RdcMan\PointHelper.cs" />
+    <Compile Include="RdcMan\PointSetting.cs" />
+    <Compile Include="RdcMan\Policies.cs" />
+    <Compile Include="RdcMan\Preferences.cs" />
+    <Compile Include="RdcMan\Preferences.Designer.cs">
+      <DependentUpon>Preferences.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RdcMan\ProfileScope.cs" />
+    <Compile Include="RdcMan\ProfileSetting.cs" />
+    <Compile Include="RdcMan\Program.cs" />
+    <Compile Include="RdcMan\QuickConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\QuickConnectDialog.Designer.cs">
+      <DependentUpon>QuickConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\QuickConnectTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcBaseForm.Designer.cs">
+      <DependentUpon>RdcBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\RdcCheckBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcDialog.Designer.cs">
+      <DependentUpon>RdcDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\RdcListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcMenuStrip.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcNumericUpDown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcRadioButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcSettingsProvider.cs" />
+    <Compile Include="RdcMan\RdcTextBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcTreeNode.cs" />
+    <Compile Include="RdcMan\RdgFile.cs" />
+    <Compile Include="RdcMan\RdpClient.cs" />
+    <Compile Include="RdcMan\RdpClient5.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdpClient6.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdpClient7.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdpClient8.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RecentlyUsedGroup.cs" />
+    <Compile Include="RdcMan\RecentlyUsedServerRef.cs" />
+    <Compile Include="RdcMan\ReconnectGroup.cs" />
+    <Compile Include="RdcMan\ReconnectServerOptions.cs" />
+    <Compile Include="RdcMan\ReconnectServerRef.cs" />
+    <Compile Include="RdcMan\RemoteDesktopSettings.cs" />
+    <Compile Include="RdcMan\RemoteDesktopsMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RemoteDesktopTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RemoteSessionInfo.cs" />
+    <Compile Include="RdcMan\RemoteSessions.cs" />
+    <Compile Include="RdcMan\Rule.cs" />
+    <Compile Include="RdcMan\RuleGroup.cs" />
+    <Compile Include="RdcMan\RuleGroupOperator.cs" />
+    <Compile Include="RdcMan\RuleOperator.cs" />
+    <Compile Include="RdcMan\RuleProperty.cs" />
+    <Compile Include="RdcMan\SaveCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SaveCredentialsDialog.Designer.cs">
+      <DependentUpon>SaveCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SaveResult.cs" />
+    <Compile Include="RdcMan\SecuritySettings.cs" />
+    <Compile Include="RdcMan\SecuritySettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectActiveServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectActiveServerForm.Designer.cs">
+      <DependentUpon>SelectActiveServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SelectedNodeMenuItem.2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectedNodeMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectServersDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectServersDialogBase.Designer.cs">
+      <DependentUpon>SelectServersDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SendKeys.cs" />
+    <Compile Include="RdcMan\SendKeysMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\Server.cs" />
+    <Compile Include="RdcMan\ServerBase.cs" />
+    <Compile Include="RdcMan\ServerBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerChangedEventArgs.cs" />
+    <Compile Include="RdcMan\ServerDisplaySettings.cs" />
+    <Compile Include="RdcMan\ServerDisplaySettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerForm.Designer.cs">
+      <DependentUpon>ServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ServerLabel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerPropertiesDialog.Designer.cs">
+      <DependentUpon>ServerPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ServerPropertiesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerProperty.cs" />
+    <Compile Include="RdcMan\ServerRef.cs" />
+    <Compile Include="RdcMan\ServerSettings.cs" />
+    <Compile Include="RdcMan\ServerTree.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerTreeLocationMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerTreeVisibilityMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SessionListSortComparer.cs" />
+    <Compile Include="RdcMan\Setting.cs" />
+    <Compile Include="RdcMan\SettingAttribute.cs" />
+    <Compile Include="RdcMan\SettingExtensions.cs" />
+    <Compile Include="RdcMan\SettingProperty.cs" />
+    <Compile Include="RdcMan\SettingsGroup.cs" />
+    <Compile Include="RdcMan\SettingsTabPage.2.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SettingsTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SizeHelper.cs" />
+    <Compile Include="RdcMan\SizeSetting.cs" />
+    <Compile Include="RdcMan\SmartGroup.cs" />
+    <Compile Include="RdcMan\SmartGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SmartGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>SmartGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SmartGroupPropertiesTabPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SmartGroupSettings.cs" />
+    <Compile Include="RdcMan\SmartServerRef.cs" />
+    <Compile Include="RdcMan\SortExtensions.cs" />
+    <Compile Include="RdcMan\SortGroupsCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SortOrder.cs" />
+    <Compile Include="RdcMan\SortServersCheckedMenuItem.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\StringSetting.cs" />
+    <Compile Include="RdcMan\StringUtilities.cs" />
+    <Compile Include="RdcMan\TabbedSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\TabbedSettingsDialog.Designer.cs">
+      <DependentUpon>TabbedSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\TemporaryServer.cs" />
+    <Compile Include="RdcMan\ThrottledAction.cs" />
+    <Compile Include="RdcMan\ThrottledOperation.cs" />
+    <Compile Include="RdcMan\ThumbnailLayout.cs" />
+    <Compile Include="RdcMan\ValueComboBox.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RdcMan\VirtualGroup.cs" />
+    <Compile Include="RdcMan\XmlSetting.cs" />
+    <Compile Include="Win32\Constants.cs" />
+    <Compile Include="Win32\Crypto.cs" />
+    <Compile Include="Win32\Kernel.cs" />
+    <Compile Include="Win32\Messages.cs" />
+    <Compile Include="Win32\Structs.cs" />
+    <Compile Include="Win32\User.cs" />
+    <Compile Include="Win32\Util.cs" />
+    <Compile Include="Win32\WinTrust.cs" />
+    <Compile Include="Win32\WinTrustData.cs" />
+    <Compile Include="Win32\WinTrustDataChoice.cs" />
+    <Compile Include="Win32\WinTrustDataProvFlags.cs" />
+    <Compile Include="Win32\WinTrustDataRevocationChecks.cs" />
+    <Compile Include="Win32\WinTrustDataStateAction.cs" />
+    <Compile Include="Win32\WinTrustDataUIChoice.cs" />
+    <Compile Include="Win32\WinTrustDataUIContext.cs" />
+    <Compile Include="Win32\WinTrustFileInfo.cs" />
+    <Compile Include="Win32\WinVerifyTrustResult.cs" />
+    <Compile Include="Win32\Wts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RdcMan\app.config" />
+    <EmbeddedResource Include="RdcMan\Resources\app.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\AxMSTSCLib.dll" />
+    <EmbeddedResource Include="RdcMan\Resources\connected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connectedselected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connecting.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connectingselected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\disconnected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\group.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\MSTSCLib.dll" />
+    <EmbeddedResource Include="RdcMan\Resources\smartgroup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="RdcMan\Preferences.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Preferences.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

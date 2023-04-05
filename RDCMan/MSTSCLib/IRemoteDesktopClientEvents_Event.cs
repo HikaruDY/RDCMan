@@ -1,0 +1,39 @@
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace MSTSCLib
+{
+	[TypeLibType(16)]
+	[ComVisible(false)]
+	[ComEventInterface(typeof(IRemoteDesktopClientEvents), typeof(IRemoteDesktopClientEvents_EventProvider))]
+	public interface IRemoteDesktopClientEvents_Event
+	{
+		event IRemoteDesktopClientEvents_OnConnectingEventHandler OnConnecting;
+
+		event IRemoteDesktopClientEvents_OnConnectedEventHandler OnConnected;
+
+		event IRemoteDesktopClientEvents_OnLoginCompletedEventHandler OnLoginCompleted;
+
+		event IRemoteDesktopClientEvents_OnDisconnectedEventHandler OnDisconnected;
+
+		event IRemoteDesktopClientEvents_OnStatusChangedEventHandler OnStatusChanged;
+
+		event IRemoteDesktopClientEvents_OnAutoReconnectingEventHandler OnAutoReconnecting;
+
+		event IRemoteDesktopClientEvents_OnAutoReconnectedEventHandler OnAutoReconnected;
+
+		event IRemoteDesktopClientEvents_OnDialogDisplayingEventHandler OnDialogDisplaying;
+
+		event IRemoteDesktopClientEvents_OnDialogDismissedEventHandler OnDialogDismissed;
+
+		event IRemoteDesktopClientEvents_OnNetworkStatusChangedEventHandler OnNetworkStatusChanged;
+
+		event IRemoteDesktopClientEvents_OnAdminMessageReceivedEventHandler OnAdminMessageReceived;
+
+		event IRemoteDesktopClientEvents_OnKeyCombinationPressedEventHandler OnKeyCombinationPressed;
+
+		event IRemoteDesktopClientEvents_OnRemoteDesktopSizeChangedEventHandler OnRemoteDesktopSizeChanged;
+
+		event IRemoteDesktopClientEvents_OnTouchPointerCursorMovedEventHandler OnTouchPointerCursorMoved;
+	}
+}

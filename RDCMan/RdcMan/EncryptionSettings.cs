@@ -34,7 +34,7 @@ namespace RdcMan
 			base.Copy(node.EncryptionSettings);
 		}
 
-		[Setting("encryptionMethod", DefaultValue = RdcMan.EncryptionMethod.LogonCredentials)]
+		[Setting("encryptionMethod", DefaultValue = RdcMan.EncryptionMethod.PlainText)]
 		public EnumSetting<EncryptionMethod> EncryptionMethod { get; private set; }
 
 		[Setting("credentialName")]

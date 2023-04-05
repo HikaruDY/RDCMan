@@ -1,0 +1,126 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile CurrentProfile="(Default)" GeneratedClassNamespace="RdcMan" GeneratedClassName="Preferences" xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="AutoSaveFiles" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="AutoSaveInterval" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ShowConnectedGroup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowFavoritesGroup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowReconnectGroup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ShowRecentlyUsedGroup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FocusOnClick" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="DimNodesWhenInactive" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="FullScreenWindowIsTopMost" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="UseMultipleMonitors" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="EnablePanning" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="PanningAcceleration" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">1</Value>
+    </Setting>
+    <Setting Name="GroupSortOrder" Type="RdcMan.SortOrder" Scope="User">
+      <Value Profile="(Default)">ByName</Value>
+    </Setting>
+    <Setting Name="ServerSortOrder" Type="RdcMan.SortOrder" Scope="User">
+      <Value Profile="(Default)">ByStatus</Value>
+    </Setting>
+    <Setting Name="ServerTreeVisibility" Type="RdcMan.ControlVisibility" Scope="User">
+      <Value Profile="(Default)">Dock</Value>
+    </Setting>
+    <Setting Name="ServerTreeAutoHidePopUpDelay" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="ServerTreeLocation" Type="System.Windows.Forms.DockStyle" Scope="User">
+      <Value Profile="(Default)">Left</Value>
+    </Setting>
+    <Setting Name="ThumbnailSizeIsInPixels" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="ThumbnailSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">160, 120</Value>
+    </Setting>
+    <Setting Name="ThumbnailPercentage" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">15</Value>
+    </Setting>
+    <Setting Name="PerformanceFlags" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">0</Value>
+    </Setting>
+    <Setting Name="PersistentBitmapCaching" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+    <Setting Name="WindowIsMaximized" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="WindowPosition" Type="System.Drawing.Point" Scope="User">
+      <Value Profile="(Default)">200, 200</Value>
+    </Setting>
+    <Setting Name="ServerTreeWidth" Type="System.Int32" Scope="User">
+      <Value Profile="(Default)">200</Value>
+    </Setting>
+    <Setting Name="ConnectionBarState" Type="RdcMan.RdpClient+ConnectionBarState" Scope="User">
+      <Value Profile="(Default)">Pinned</Value>
+    </Setting>
+    <Setting Name="WindowSize" Type="System.Drawing.Size" Scope="User">
+      <Value Profile="(Default)">1273, 823</Value>
+    </Setting>
+    <Setting Name="LockWindowSize" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="HotKeyAltEsc" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Insert</Value>
+    </Setting>
+    <Setting Name="HotKeyCtrlEsc" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Home</Value>
+    </Setting>
+    <Setting Name="HotKeyAltTab" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">PageUp</Value>
+    </Setting>
+    <Setting Name="HotKeyAltShiftTab" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">PageDown</Value>
+    </Setting>
+    <Setting Name="HotKeyAltSpace" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Delete</Value>
+    </Setting>
+    <Setting Name="HotKeyCtrlAltDel" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">End</Value>
+    </Setting>
+    <Setting Name="HotKeyFullScreen" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Cancel</Value>
+    </Setting>
+    <Setting Name="HotKeyFocusReleaseLeft" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Left</Value>
+    </Setting>
+    <Setting Name="HotKeyFocusReleaseRight" Type="System.Windows.Forms.Keys" Scope="User">
+      <Value Profile="(Default)">Right</Value>
+    </Setting>
+    <Setting Name="LastUpdateCheckTimeUtc" Type="System.String" Scope="User">
+      <Value Profile="(Default)">2012-06-01 00:00:00Z</Value>
+    </Setting>
+    <Setting Name="HideMainMenu" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">False</Value>
+    </Setting>
+    <Setting Name="ReconnectOnStartup" Type="System.Boolean" Scope="User">
+      <Value Profile="(Default)">True</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

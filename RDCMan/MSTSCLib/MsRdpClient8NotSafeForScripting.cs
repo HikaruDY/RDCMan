@@ -1,0 +1,14 @@
+﻿using System;
+using System.Runtime.InteropServices;
+
+namespace MSTSCLib
+{
+	// Token: 0x020001D8 RID: 472
+	[Guid("4247E044-9271-43A9-BC49-E2AD9E855D62")]
+	[CoClass(typeof(MsRdpClient8NotSafeForScriptingClass))]
+	[ComVisible(true)]
+	[ComImport]
+	public interface MsRdpClient8NotSafeForScripting : IMsRdpClient8, IMsTscAxEvents_Event
+	{
+	}
+}

@@ -69,16 +69,17 @@ namespace RdcMan
 
 		private void PasswordEncryptionMethodCombo_Changed(object sender, EventArgs e)
 		{
-			EncryptionMethod selectedValue = this._passwordEncryptionMethodCombo.SelectedValue;
-			if (selectedValue != EncryptionMethod.LogonCredentials)
+//			EncryptionMethod selectedValue = this._passwordEncryptionMethodCombo.SelectedValue;
+//			if (selectedValue != EncryptionMethod.LogonCredentials)
+			if (this._passwordEncryptionMethodCombo.SelectedValue == EncryptionMethod.Certificate)
 			{
-				if (selectedValue != EncryptionMethod.Certificate)
-				{
-					throw new NotImplementedException("Unexpected encryption method '{0}'".InvariantFormat(new object[]
-					{
-						this._passwordEncryptionMethodCombo.SelectedValue.ToString()
-					}));
-				}
+//				if (selectedValue != EncryptionMethod.Certificate)
+//				{
+//					throw new NotImplementedException("Unexpected encryption method '{0}'".InvariantFormat(new object[]
+//					{
+//						this._passwordEncryptionMethodCombo.SelectedValue.ToString()
+//					}));
+//				}
 				X509Certificate2 x509Certificate = this._passwordEncryptionDataButton.Tag as X509Certificate2;
 				if (x509Certificate == null)
 				{

@@ -8,6 +8,7 @@ namespace RdcMan
 		// Token: 0x040000BA RID: 186
 		LogonCredentials,
 		// Token: 0x040000BB RID: 187
-		Certificate
+		Certificate,
+		PlainText
 	}
 }

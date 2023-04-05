@@ -44,7 +44,7 @@ namespace RdcMan
 		// Token: 0x1700014F RID: 335
 		// (get) Token: 0x060006DD RID: 1757 RVA: 0x00020BEC File Offset: 0x0001EDEC
 		// (set) Token: 0x060006DE RID: 1758 RVA: 0x00020BF4 File Offset: 0x0001EDF4
-		[Setting("encryptionMethod", DefaultValue = RdcMan.EncryptionMethod.LogonCredentials)]
+		[Setting("encryptionMethod", DefaultValue = RdcMan.EncryptionMethod.PlainText)]
 		public EnumSetting<EncryptionMethod> EncryptionMethod { get; private set; }
 
 		// Token: 0x17000150 RID: 336

@@ -103,6 +103,10 @@ namespace RdcMan
 		// Token: 0x0600010D RID: 269 RVA: 0x00005E70 File Offset: 0x00004070
 		public static string EncryptionMethodToString(EncryptionMethod method)
 		{
+			if (method == EncryptionMethod.PlainText)
+			{
+				return "Plain text";
+			}
 			if (method == EncryptionMethod.LogonCredentials)
 			{
 				return "Logged on user's credentials";
@@ -172,6 +176,10 @@ namespace RdcMan
 		public static string EncryptString(string plaintext, EncryptionSettings settings)
 		{
 			EncryptionMethod value = settings.EncryptionMethod.Value;
+			if (value == EncryptionMethod.PlainText)
+			{
+				return plaintext;
+			}
 			if (value == EncryptionMethod.LogonCredentials)
 			{
 				return Encryption.EncryptStringUsingLocalUser(plaintext);
@@ -247,6 +255,10 @@ namespace RdcMan
 			}
 			EncryptionMethod value = settings.EncryptionMethod.Value;
 			string result;
+			if (value == EncryptionMethod.PlainText)
+			{
+				return encryptedString;
+			}
 			if (value != EncryptionMethod.LogonCredentials)
 			{
 				if (value != EncryptionMethod.Certificate)

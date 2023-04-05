@@ -1,0 +1,749 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{EAC3528C-D77D-4918-93A7-33407848A52C}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RDCMan</RootNamespace>
+    <AssemblyName>RDCMan</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <ApplicationIcon>RDCMan.ico</ApplicationIcon>
+    <StartupObject>RdcMan.Program</StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AxMSTSCLib\AxMsRdpClient10.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient10EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient10NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient10NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient11.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient11EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient11NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient11NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2a.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2aEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient2NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3a.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3aEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient3NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4a.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4aEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient4NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient5.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient5EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient5NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient5NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient6.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient6EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient6NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient6NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient7.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient7EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient7NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient7NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient8.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient8EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient8NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient8NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient9.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient9EventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient9NotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClient9NotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClientNotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsRdpClientNotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxMsTscAxNotSafeForScripting.cs" />
+    <Compile Include="AxMSTSCLib\AxMsTscAxNotSafeForScriptingEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\AxRemoteDesktopClient.cs" />
+    <Compile Include="AxMSTSCLib\AxRemoteDesktopClientEventMulticaster.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnAutoReconnecting2Event.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnAutoReconnecting2EventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnAutoReconnectingEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnAutoReconnectingEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnChannelReceivedDataEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnChannelReceivedDataEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnConfirmCloseEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnConfirmCloseEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnDisconnectedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnDisconnectedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnFatalErrorEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnFatalErrorEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnFocusReleasedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnFocusReleasedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnLogonErrorEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnLogonErrorEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnMouseInputModeChangedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnMouseInputModeChangedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnNetworkStatusChangedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnNetworkStatusChangedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnReceivedTSPublicKeyEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnReceivedTSPublicKeyEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteDesktopSizeChangeEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteDesktopSizeChangeEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteProgramDisplayedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteProgramDisplayedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteProgramResultEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteProgramResultEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteWindowDisplayedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnRemoteWindowDisplayedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnServiceMessageReceivedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnServiceMessageReceivedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnUserNameAcquiredEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnUserNameAcquiredEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnWarningEvent.cs" />
+    <Compile Include="AxMSTSCLib\IMsTscAxEvents_OnWarningEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnAdminMessageReceivedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnAdminMessageReceivedEventHandle.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnAutoReconnectingEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnAutoReconnectingEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnDisconnectedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnDisconnectedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnKeyCombinationPressedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnKeyCombinationPressedEventHandl.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnNetworkStatusChangedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnNetworkStatusChangedEventHandle.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnRemoteDesktopSizeChangedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnRemoteDesktopSizeChangedEventHa.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnStatusChangedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnStatusChangedEventHandler.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnTouchPointerCursorMovedEvent.cs" />
+    <Compile Include="AxMSTSCLib\IRemoteDesktopClientEvents_OnTouchPointerCursorMovedEventHan.cs" />
+    <Compile Include="MSTSCLib\AutoReconnectContinueState.cs" />
+    <Compile Include="MSTSCLib\CameraRedirEncodingQuality.cs" />
+    <Compile Include="MSTSCLib\ClientSpec.cs" />
+    <Compile Include="MSTSCLib\ControlCloseStatus.cs" />
+    <Compile Include="MSTSCLib\ControlReconnectStatus.cs" />
+    <Compile Include="MSTSCLib\ExtendedDisconnectReasonCode.cs" />
+    <Compile Include="MSTSCLib\IMsRdpCameraRedirConfig.cs" />
+    <Compile Include="MSTSCLib\IMsRdpCameraRedirConfigCollection.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient10.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient2.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient3.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient4.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient5.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient6.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient7.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient8.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClient9.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings2.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings3.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings4.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings5.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings6.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings7.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientAdvancedSettings8.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable2.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable3.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable4.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable5.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable6.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientNonScriptable7.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientSecuredSettings.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientSecuredSettings2.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientShell.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientTransportSettings.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientTransportSettings2.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientTransportSettings3.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClientTransportSettings4.cs" />
+    <Compile Include="MSTSCLib\IMsRdpClipboard.cs" />
+    <Compile Include="MSTSCLib\IMsRdpDevice.cs" />
+    <Compile Include="MSTSCLib\IMsRdpDeviceCollection.cs" />
+    <Compile Include="MSTSCLib\IMsRdpDrive.cs" />
+    <Compile Include="MSTSCLib\IMsRdpDriveCollection.cs" />
+    <Compile Include="MSTSCLib\IMsRdpExtendedSettings.cs" />
+    <Compile Include="MSTSCLib\IMsRdpPreferredRedirectionInfo.cs" />
+    <Compile Include="MSTSCLib\IMsTscAdvancedSettings.cs" />
+    <Compile Include="MSTSCLib\IMsTscAx.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_Event.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_EventProvider.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnAuthenticationWarningDismissedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnAuthenticationWarningDisplayedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnAutoReconnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnAutoReconnecting2EventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnAutoReconnectingEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnChannelReceivedDataEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnConfirmCloseEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnConnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnConnectingEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnConnectionBarPullDownEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnDevicesButtonPressedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnDisconnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnEnterFullScreenModeEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnFatalErrorEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnFocusReleasedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnIdleTimeoutNotificationEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnLeaveFullScreenModeEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnLoginCompleteEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnLogonErrorEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnMouseInputModeChangedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnNetworkStatusChangedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnReceivedTSPublicKeyEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRemoteDesktopSizeChangeEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRemoteProgramDisplayedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRemoteProgramResultEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRemoteWindowDisplayedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRequestContainerMinimizeEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRequestGoFullScreenEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnRequestLeaveFullScreenEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnServiceMessageReceivedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnUserNameAcquiredEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_OnWarningEventHandler.cs" />
+    <Compile Include="MSTSCLib\IMsTscAxEvents_SinkHelper.cs" />
+    <Compile Include="MSTSCLib\IMsTscAx_Redist.cs" />
+    <Compile Include="MSTSCLib\IMsTscDebug.cs" />
+    <Compile Include="MSTSCLib\IMsTscNonScriptable.cs" />
+    <Compile Include="MSTSCLib\IMsTscSecuredSettings.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClient.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientActions.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_Event.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_EventProvider.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnAdminMessageReceivedEventHandle.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnAutoReconnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnAutoReconnectingEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnConnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnConnectingEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnDialogDismissedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnDialogDisplayingEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnDisconnectedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnKeyCombinationPressedEventHandl.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnLoginCompletedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnNetworkStatusChangedEventHandle.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnRemoteDesktopSizeChangedEventHa.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnStatusChangedEventHandler.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_OnTouchPointerCursorMovedEventHan.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientEvents_SinkHelper.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientSettings.cs" />
+    <Compile Include="MSTSCLib\IRemoteDesktopClientTouchPointer.cs" />
+    <Compile Include="MSTSCLib\ITSRemoteProgram.cs" />
+    <Compile Include="MSTSCLib\ITSRemoteProgram2.cs" />
+    <Compile Include="MSTSCLib\ITSRemoteProgram3.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient10.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient10Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient10NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient10NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient11.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient11Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient11NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient11NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2a.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2aClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient2NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3a.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3aClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient3NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4a.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4aClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient4NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient5.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient5Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient5NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient5NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient6.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient6Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient6NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient6NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient7.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient7Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient7NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient7NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient8.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient8Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient8NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient8NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient9.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient9Class.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient9NotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClient9NotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClientClass.cs" />
+    <Compile Include="MSTSCLib\MsRdpClientNotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsRdpClientNotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\MsTscAx.cs" />
+    <Compile Include="MSTSCLib\MsTscAxClass.cs" />
+    <Compile Include="MSTSCLib\MsTscAxNotSafeForScripting.cs" />
+    <Compile Include="MSTSCLib\MsTscAxNotSafeForScriptingClass.cs" />
+    <Compile Include="MSTSCLib\RedirectionWarningType.cs" />
+    <Compile Include="MSTSCLib\RemoteActionType.cs" />
+    <Compile Include="MSTSCLib\RemoteDesktopClient.cs" />
+    <Compile Include="MSTSCLib\RemoteDesktopClientClass.cs" />
+    <Compile Include="MSTSCLib\RemoteProgramResult.cs" />
+    <Compile Include="MSTSCLib\RemoteSessionActionType.cs" />
+    <Compile Include="MSTSCLib\RemoteWindowDisplayedAttribute.cs" />
+    <Compile Include="MSTSCLib\SnapshotEncodingType.cs" />
+    <Compile Include="MSTSCLib\SnapshotFormatType.cs" />
+    <Compile Include="MSTSCLib\_RemotableHandle.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IMsRdpClient8_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IMsRdpClientNonScriptable4_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IMsRdpClient_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IRemoteDesktopClientActions_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IRemoteDesktopClientActions_0002.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IRemoteDesktopClientActions_0003.cs" />
+    <Compile Include="MSTSCLib\__MIDL_IWinTypes_0009.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0000_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0000_0003.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0000_0004.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0008_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0043_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0057_0001.cs" />
+    <Compile Include="MSTSCLib\__MIDL___MIDL_itf_mstsax_0000_0057_0002.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RdcMan\About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\AddCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\AddCredentialsDialog.Designer.cs">
+      <DependentUpon>AddCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\AddNodeDialogHelper.cs" />
+    <Compile Include="RdcMan\ArgumentParser.cs" />
+    <Compile Include="RdcMan\BaseSetting.cs" />
+    <Compile Include="RdcMan\BoolSetting.cs" />
+    <Compile Include="RdcMan\BuiltInVirtualGroup.cs" />
+    <Compile Include="RdcMan\BuiltInVirtualGroupCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\ChangeType.cs" />
+    <Compile Include="RdcMan\CheckedMenuItem.cs" />
+    <Compile Include="RdcMan\ClientPanel.cs" />
+    <Compile Include="RdcMan\ClientSizeCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\CommonDisplaySettings.cs" />
+    <Compile Include="RdcMan\CommonNodeSettings.cs" />
+    <Compile Include="RdcMan\Configuration\Current.cs" />
+    <Compile Include="RdcMan\Configuration\DisplaySizeElement.cs" />
+    <Compile Include="RdcMan\Configuration\DisplaySizeElementCollection.cs" />
+    <Compile Include="RdcMan\Configuration\LoggingElement.cs" />
+    <Compile Include="RdcMan\Configuration\ProgramUpdateElement.cs" />
+    <Compile Include="RdcMan\Configuration\RdcManSection.cs" />
+    <Compile Include="RdcMan\Configuration\WarningThresholdsElement.cs" />
+    <Compile Include="RdcMan\ConnectAsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectAsDialog.Designer.cs">
+      <DependentUpon>ConnectAsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectedGroup.cs" />
+    <Compile Include="RdcMan\ConnectedServerRef.cs" />
+    <Compile Include="RdcMan\ConnectionSettings.cs" />
+    <Compile Include="RdcMan\ConnectionSettingsTabPage.cs" />
+    <Compile Include="RdcMan\ConnectionStateChangedEventArgs.cs" />
+    <Compile Include="RdcMan\ConnectionType.cs" />
+    <Compile Include="RdcMan\ConnectServersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectServersDialog.Designer.cs">
+      <DependentUpon>ConnectServersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToDialog.Designer.cs">
+      <DependentUpon>ConnectToDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ConnectToGroup.cs" />
+    <Compile Include="RdcMan\ControlExtensions.cs" />
+    <Compile Include="RdcMan\ControlVisibility.cs" />
+    <Compile Include="RdcMan\CredentialsProfile.cs" />
+    <Compile Include="RdcMan\CredentialsStore.cs" />
+    <Compile Include="RdcMan\CredentialsTabPage.cs" />
+    <Compile Include="RdcMan\CredentialsUI.cs" />
+    <Compile Include="RdcMan\CustomClientSizeCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\CustomSizeDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\CustomSizeDialog.Designer.cs">
+      <DependentUpon>CustomSizeDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\DefaultGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\DefaultGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>DefaultGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\DefaultSettingsGroup.cs" />
+    <Compile Include="RdcMan\DeferDecryptionItem.cs" />
+    <Compile Include="RdcMan\DelegateCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\DelegateMenuItem.cs" />
+    <Compile Include="RdcMan\DisplaySettingsTabPage.cs" />
+    <Compile Include="RdcMan\EnableTabsEventArgs.cs" />
+    <Compile Include="RdcMan\Encryption.cs" />
+    <Compile Include="RdcMan\EncryptionMethod.cs" />
+    <Compile Include="RdcMan\EncryptionSettings.cs" />
+    <Compile Include="RdcMan\EncryptionSettingsTabPage.cs" />
+    <Compile Include="RdcMan\EnumMenuItem.cs" />
+    <Compile Include="RdcMan\EnumSetting.cs" />
+    <Compile Include="RdcMan\FavoriteServerRef.cs" />
+    <Compile Include="RdcMan\FavoritesGroup.cs" />
+    <Compile Include="RdcMan\FileGroup.cs" />
+    <Compile Include="RdcMan\FileGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FileGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>FileGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\FileGroupPropertiesTabPage.cs" />
+    <Compile Include="RdcMan\FileGroupSettings.cs" />
+    <Compile Include="RdcMan\FileRequiredMenuItem.cs" />
+    <Compile Include="RdcMan\FindServersDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\FindServersDialog.Designer.cs">
+      <DependentUpon>FindServersDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\FormTools.cs" />
+    <Compile Include="RdcMan\GatewaySettings.cs" />
+    <Compile Include="RdcMan\GatewaySettingsTabPage.cs" />
+    <Compile Include="RdcMan\GlobalOptionsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GlobalOptionsDialog.Designer.cs">
+      <DependentUpon>GlobalOptionsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GlobalSettings.cs" />
+    <Compile Include="RdcMan\Group.cs" />
+    <Compile Include="RdcMan\GroupBase.cs" />
+    <Compile Include="RdcMan\GroupBasePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupBasePropertiesDialog.Designer.cs">
+      <DependentUpon>GroupBasePropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GroupBasePropertiesTabPage.cs" />
+    <Compile Include="RdcMan\GroupChangedEventArgs.cs" />
+    <Compile Include="RdcMan\GroupDisplaySettings.cs" />
+    <Compile Include="RdcMan\GroupDisplaySettingsTabPage.cs" />
+    <Compile Include="RdcMan\GroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\GroupPropertiesDialog.Designer.cs">
+      <DependentUpon>GroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\GroupPropertiesTabPage.cs" />
+    <Compile Include="RdcMan\GroupSettings.cs" />
+    <Compile Include="RdcMan\HeaderColumnClickEventArgs.cs" />
+    <Compile Include="RdcMan\HeaderColumnClickEventHandler.cs" />
+    <Compile Include="RdcMan\Helpers.cs" />
+    <Compile Include="RdcMan\HotKeyBox.cs" />
+    <Compile Include="RdcMan\IBuiltInVirtualGroup.cs" />
+    <Compile Include="RdcMan\ICredentialsTabPage.cs" />
+    <Compile Include="RdcMan\IDeferDecryption.cs" />
+    <Compile Include="RdcMan\ILogonCredentials.cs" />
+    <Compile Include="RdcMan\ImageConstants.cs" />
+    <Compile Include="RdcMan\IMainForm.cs" />
+    <Compile Include="RdcMan\ImportServersPropertiesPage.cs" />
+    <Compile Include="RdcMan\InheritanceControl.cs" />
+    <Compile Include="RdcMan\InheritanceMode.cs" />
+    <Compile Include="RdcMan\InheritSettingsType.cs" />
+    <Compile Include="RdcMan\INodePropertiesPage.cs" />
+    <Compile Include="RdcMan\IntSetting.cs" />
+    <Compile Include="RdcMan\IPlugin.cs" />
+    <Compile Include="RdcMan\IPluginContext.cs" />
+    <Compile Include="RdcMan\IRdpClient.cs" />
+    <Compile Include="RdcMan\IServerRefFactory.cs" />
+    <Compile Include="RdcMan\IServerTree.cs" />
+    <Compile Include="RdcMan\ISetting.cs" />
+    <Compile Include="RdcMan\ISettingControl.cs" />
+    <Compile Include="RdcMan\ISettingsTabPage.cs" />
+    <Compile Include="RdcMan\IUndockedServerForm.cs" />
+    <Compile Include="RdcMan\ListSessionsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ListSessionsForm.Designer.cs">
+      <DependentUpon>ListSessionsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ListSetting.cs" />
+    <Compile Include="RdcMan\LocalResourcesSettings.cs" />
+    <Compile Include="RdcMan\LocalResourcesTabPage.cs" />
+    <Compile Include="RdcMan\Log.cs" />
+    <Compile Include="RdcMan\LogonCredentials.cs" />
+    <Compile Include="RdcMan\LogonCredentialsDialogOptions.cs" />
+    <Compile Include="RdcMan\LogonCredentialsTabPage.cs" />
+    <Compile Include="RdcMan\LogonSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\LogonSettingsDialog.Designer.cs">
+      <DependentUpon>LogonSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\LongRunningActionForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\LongRunningActionForm.Designer.cs">
+      <DependentUpon>LongRunningActionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\MenuExtensions.cs" />
+    <Compile Include="RdcMan\MenuHelper.cs" />
+    <Compile Include="RdcMan\MenuNames.cs" />
+    <Compile Include="RdcMan\NodeHelper.cs" />
+    <Compile Include="RdcMan\NodePropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\NodePropertiesDialog.Designer.cs">
+      <DependentUpon>NodePropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\NodePropertiesPage.cs" />
+    <Compile Include="RdcMan\NodeVisitorResult.cs" />
+    <Compile Include="RdcMan\NumericTextBox.cs" />
+    <Compile Include="RdcMan\OperationBehavior.cs" />
+    <Compile Include="RdcMan\PasswordSetting.cs" />
+    <Compile Include="RdcMan\PluginContext.cs" />
+    <Compile Include="RdcMan\PointHelper.cs" />
+    <Compile Include="RdcMan\PointSetting.cs" />
+    <Compile Include="RdcMan\Policies.cs" />
+    <Compile Include="RdcMan\Preferences.cs" />
+    <Compile Include="RdcMan\Preferences.Designer.cs">
+      <DependentUpon>Preferences.settings</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RdcMan\ProfileScope.cs" />
+    <Compile Include="RdcMan\ProfileSetting.cs" />
+    <Compile Include="RdcMan\Program.cs" />
+    <Compile Include="RdcMan\QuickConnectDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\QuickConnectDialog.Designer.cs">
+      <DependentUpon>QuickConnectDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\QuickConnectTabPage.cs" />
+    <Compile Include="RdcMan\RdcBaseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcBaseForm.Designer.cs">
+      <DependentUpon>RdcBaseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\RdcCheckBox.cs" />
+    <Compile Include="RdcMan\RdcDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\RdcDialog.Designer.cs">
+      <DependentUpon>RdcDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\RdcListView.cs" />
+    <Compile Include="RdcMan\RdcMenuItem.cs" />
+    <Compile Include="RdcMan\RdcMenuStrip.cs" />
+    <Compile Include="RdcMan\RdcNumericUpDown.cs" />
+    <Compile Include="RdcMan\RdcRadioButton.cs" />
+    <Compile Include="RdcMan\RdcSettingsProvider.cs" />
+    <Compile Include="RdcMan\RdcTextBox.cs" />
+    <Compile Include="RdcMan\RdcTreeNode.cs" />
+    <Compile Include="RdcMan\RdgFile.cs" />
+    <Compile Include="RdcMan\RdpClient.cs" />
+    <Compile Include="RdcMan\RdpClient10.cs" />
+    <Compile Include="RdcMan\RdpClient5.cs" />
+    <Compile Include="RdcMan\RdpClient6.cs" />
+    <Compile Include="RdcMan\RdpClient7.cs" />
+    <Compile Include="RdcMan\RdpClient8.cs" />
+    <Compile Include="RdcMan\RdpClient9.cs" />
+    <Compile Include="RdcMan\RecentlyUsedGroup.cs" />
+    <Compile Include="RdcMan\RecentlyUsedServerRef.cs" />
+    <Compile Include="RdcMan\ReconnectGroup.cs" />
+    <Compile Include="RdcMan\ReconnectServerOptions.cs" />
+    <Compile Include="RdcMan\ReconnectServerRef.cs" />
+    <Compile Include="RdcMan\RemoteDesktopSettings.cs" />
+    <Compile Include="RdcMan\RemoteDesktopsMenuItem.cs" />
+    <Compile Include="RdcMan\RemoteDesktopTabPage.cs" />
+    <Compile Include="RdcMan\RemoteSessionInfo.cs" />
+    <Compile Include="RdcMan\RemoteSessions.cs" />
+    <Compile Include="RdcMan\Rule.cs" />
+    <Compile Include="RdcMan\RuleGroup.cs" />
+    <Compile Include="RdcMan\RuleGroupOperator.cs" />
+    <Compile Include="RdcMan\RuleOperator.cs" />
+    <Compile Include="RdcMan\RuleProperty.cs" />
+    <Compile Include="RdcMan\SaveCredentialsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SaveCredentialsDialog.Designer.cs">
+      <DependentUpon>SaveCredentialsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SaveResult.cs" />
+    <Compile Include="RdcMan\SecuritySettings.cs" />
+    <Compile Include="RdcMan\SecuritySettingsTabPage.cs" />
+    <Compile Include="RdcMan\SelectActiveServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectActiveServerForm.Designer.cs">
+      <DependentUpon>SelectActiveServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SelectedNodeMenuItem.2.cs" />
+    <Compile Include="RdcMan\SelectedNodeMenuItem.cs" />
+    <Compile Include="RdcMan\SelectServersDialogBase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SelectServersDialogBase.Designer.cs">
+      <DependentUpon>SelectServersDialogBase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SendKeys.cs" />
+    <Compile Include="RdcMan\SendKeysMenuItem.cs" />
+    <Compile Include="RdcMan\Server.cs" />
+    <Compile Include="RdcMan\ServerBase.cs" />
+    <Compile Include="RdcMan\ServerBox.cs" />
+    <Compile Include="RdcMan\ServerChangedEventArgs.cs" />
+    <Compile Include="RdcMan\ServerDisplaySettings.cs" />
+    <Compile Include="RdcMan\ServerDisplaySettingsTabPage.cs" />
+    <Compile Include="RdcMan\ServerForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerForm.Designer.cs">
+      <DependentUpon>ServerForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ServerLabel.cs" />
+    <Compile Include="RdcMan\ServerMenuItem.cs" />
+    <Compile Include="RdcMan\ServerPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\ServerPropertiesDialog.Designer.cs">
+      <DependentUpon>ServerPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\ServerPropertiesTabPage.cs" />
+    <Compile Include="RdcMan\ServerProperty.cs" />
+    <Compile Include="RdcMan\ServerRef.cs" />
+    <Compile Include="RdcMan\ServerSettings.cs" />
+    <Compile Include="RdcMan\ServerTree.cs" />
+    <Compile Include="RdcMan\ServerTreeLocationMenuItem.cs" />
+    <Compile Include="RdcMan\ServerTreeVisibilityMenuItem.cs" />
+    <Compile Include="RdcMan\SessionListSortComparer.cs" />
+    <Compile Include="RdcMan\Setting.cs" />
+    <Compile Include="RdcMan\SettingAttribute.cs" />
+    <Compile Include="RdcMan\SettingExtensions.cs" />
+    <Compile Include="RdcMan\SettingProperty.cs" />
+    <Compile Include="RdcMan\SettingsGroup.cs" />
+    <Compile Include="RdcMan\SettingsTabPage.2.cs" />
+    <Compile Include="RdcMan\SettingsTabPage.cs" />
+    <Compile Include="RdcMan\SizeHelper.cs" />
+    <Compile Include="RdcMan\SizeSetting.cs" />
+    <Compile Include="RdcMan\SmartGroup.cs" />
+    <Compile Include="RdcMan\SmartGroupPropertiesDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\SmartGroupPropertiesDialog.Designer.cs">
+      <DependentUpon>SmartGroupPropertiesDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\SmartGroupPropertiesTabPage.cs" />
+    <Compile Include="RdcMan\SmartGroupSettings.cs" />
+    <Compile Include="RdcMan\SmartServerRef.cs" />
+    <Compile Include="RdcMan\SortExtensions.cs" />
+    <Compile Include="RdcMan\SortGroupsCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\SortOrder.cs" />
+    <Compile Include="RdcMan\SortServersCheckedMenuItem.cs" />
+    <Compile Include="RdcMan\StringSetting.cs" />
+    <Compile Include="RdcMan\StringUtilities.cs" />
+    <Compile Include="RdcMan\TabbedSettingsDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RdcMan\TabbedSettingsDialog.Designer.cs">
+      <DependentUpon>TabbedSettingsDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RdcMan\TemporaryServer.cs" />
+    <Compile Include="RdcMan\ThrottledAction.cs" />
+    <Compile Include="RdcMan\ThrottledOperation.cs" />
+    <Compile Include="RdcMan\ThumbnailLayout.cs" />
+    <Compile Include="RdcMan\ValueComboBox.cs" />
+    <Compile Include="RdcMan\VirtualGroup.cs" />
+    <Compile Include="RdcMan\XmlSetting.cs" />
+    <Compile Include="Win32\Constants.cs" />
+    <Compile Include="Win32\Crypto.cs" />
+    <Compile Include="Win32\Kernel.cs" />
+    <Compile Include="Win32\Messages.cs" />
+    <Compile Include="Win32\Structs.cs" />
+    <Compile Include="Win32\User.cs" />
+    <Compile Include="Win32\Util.cs" />
+    <Compile Include="Win32\WinTrust.cs" />
+    <Compile Include="Win32\WinTrustData.cs" />
+    <Compile Include="Win32\WinTrustDataChoice.cs" />
+    <Compile Include="Win32\WinTrustDataProvFlags.cs" />
+    <Compile Include="Win32\WinTrustDataRevocationChecks.cs" />
+    <Compile Include="Win32\WinTrustDataStateAction.cs" />
+    <Compile Include="Win32\WinTrustDataUIChoice.cs" />
+    <Compile Include="Win32\WinTrustDataUIContext.cs" />
+    <Compile Include="Win32\WinTrustFileInfo.cs" />
+    <Compile Include="Win32\WinVerifyTrustResult.cs" />
+    <Compile Include="Win32\Wts.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="RdcMan\app.config" />
+    <EmbeddedResource Include="RdcMan\Resources\app.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connectedselected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connecting.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\connectingselected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\default.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\disconnected.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\group.ico" />
+    <EmbeddedResource Include="RdcMan\Resources\smartgroup.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.manifest" />
+    <None Include="RdcMan\Preferences.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Preferences.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

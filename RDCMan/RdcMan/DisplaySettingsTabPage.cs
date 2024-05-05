@@ -34,6 +34,11 @@ namespace RdcMan
 			control2.TabIndex = num;
 			FormTools.AddLabeledEnumDropDown<RdpClient.SmartSizeMethod>(this, "&Docked RD scaling", base.Settings.SmartSizeDockedWindow, ref rowIndex, ref tabIndex, new Func<RdpClient.SmartSizeMethod, string>(RdpClient.SmartSizeMethodToString));
 			FormTools.AddLabeledEnumDropDown<RdpClient.SmartSizeMethod>(this, "&Undocked RD scaling", base.Settings.SmartSizeUndockedWindow, ref rowIndex, ref tabIndex, new Func<RdpClient.SmartSizeMethod, string>(RdpClient.SmartSizeMethodToString));
+			base.Controls.Add(new Control[]
+			{
+				label,
+				rdcNumericUpDown
+			});
 		}
 	}
 }

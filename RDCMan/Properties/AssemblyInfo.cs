@@ -7,7 +7,7 @@ using System.Runtime.Versioning;
 using System.Security;
 using System.Security.Permissions;
 
-[assembly: AssemblyVersion("2.92.1430.0")]
+[assembly: AssemblyVersion("2.93.1431.0")]
 [assembly: AssemblyTitle("Remote Desktop Connection Manager")]
 [assembly: AssemblyDescription("Remote Desktop Connection Manager")]
 [assembly: AssemblyConfiguration("")]

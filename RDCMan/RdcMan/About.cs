@@ -44,6 +44,9 @@ namespace RdcMan
 				Text = "OK"
 			};
 			button.Location = new Point(num2 - button.Width + 16, 13);
+			PictureBox pictureBox = new PictureBox();
+			pictureBox.Location = new Point(10, 10);
+			pictureBox.Image = Program.TheForm.Icon.ToBitmap();
 			base.AutoScaleDimensions = new SizeF(96f, 96f);
 			base.AutoScaleMode = AutoScaleMode.Dpi;
 			base.FormBorderStyle = FormBorderStyle.FixedDialog;
@@ -52,6 +55,7 @@ namespace RdcMan
 			base.Controls.Add(value2);
 			base.Controls.Add(linkLabel);
 			base.Controls.Add(button);
+			base.Controls.Add(pictureBox);
 			base.MaximizeBox = false;
 			base.MinimizeBox = false;
 			base.SizeGripStyle = SizeGripStyle.Hide;
@@ -66,12 +70,6 @@ namespace RdcMan
 		public About(bool isLarge)
 		{
 			this.InitializeComponent(isLarge);
-		}
-
-		protected override void OnPaint(PaintEventArgs e)
-		{
-			e.Graphics.DrawIcon(Program.TheForm.Icon, 10, 10);
-			base.OnPaint(e);
 		}
 	}
 }
